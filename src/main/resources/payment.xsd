@@ -16,10 +16,17 @@
     <xs:element name="getPaymentResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="amount" type="xs:decimal" />
-                <xs:element name="type" type="xs:string" />
+                <xs:element name="payments" type="tns:payment" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:complexType name="payment">
+            <xs:sequence>
+                <xs:element name="amount" type="xs:decimal" />
+                <xs:element name="type" type="xs:string" />
+            </xs:sequence>
+    </xs:complexType>
+
 
 </xs:schema>
