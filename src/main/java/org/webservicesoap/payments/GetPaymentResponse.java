@@ -44,6 +44,13 @@ public class GetPaymentResponse {
 
     protected List<Payment> payments;
 
+    public GetPaymentResponse() {
+    }
+
+    public GetPaymentResponse(List<Payment> payments) {
+        this.payments = payments;
+    }
+
     /**
      * Gets the value of the payments property.
      * 

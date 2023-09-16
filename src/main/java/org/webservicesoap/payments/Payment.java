@@ -47,6 +47,14 @@ public class Payment {
     @XmlElement(required = true)
     protected String type;
 
+    public Payment() {
+    }
+
+    public Payment(BigDecimal amount, String type) {
+        this.amount = amount;
+        this.type = type;
+    }
+
     /**
      * Gets the value of the amount property.
      * 
